@@ -1,7 +1,11 @@
+#include "env.h"
+
 #include <WiFi.h>
 
-const char* ssid     = "****";
-const char* password = "****";
+
+
+const char* ssid     = envssid;
+const char* password = envkey;
 
 WiFiServer server(80);
 
@@ -42,7 +46,7 @@ void setup() {
   pinMode(LED_BUILTIN, OUTPUT);  
 	Serial.begin(115200);
   tft.begin();
-  tft.fillScreen(BLACK);
+  tft.fillScreen(RED);
   
   delay(10);
 
@@ -59,7 +63,9 @@ void setup() {
         digitalWrite(LED_BUILTIN, LOW); 
         delay(200);
         digitalWrite(LED_BUILTIN, HIGH);                 
+        tft.fillScreen(BLUE);
         delay(1000);
+        tft.fillScreen(RED);
         Serial.print(".");
   }
 
