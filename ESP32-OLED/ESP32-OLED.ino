@@ -64,8 +64,9 @@ void setup() {
         delay(200);
         digitalWrite(LED_BUILTIN, HIGH);                 
         tft.fillScreen(BLUE);
-        delay(1000);
+        delay(3000);
         tft.fillScreen(RED);
+        delay(3000);
         Serial.print(".");
   }
 
