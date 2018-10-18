@@ -33,7 +33,7 @@ IPAddress myip;
 void setup() {
   digitalWrite(LED_BUILTIN, HIGH);  
   pinMode(LED_BUILTIN, OUTPUT);  
-	Serial.begin(115200);
+  Serial.begin(115200);
 
   tft.begin();
   displayPrepare();
@@ -138,7 +138,7 @@ void pinOff(){
 void displayPinPrepare(){
   tft.fillRect(10, 70, 220, 40, ILI9341_YELLOW);
   tft.drawRect(10, 70, 220, 40, ILI9341_BLACK);
-  tft.setCursor(10, 70);
+  tft.setCursor(50, 70);
   tft.setTextSize(4);
 }
 
